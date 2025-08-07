@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('city')">City</button>
+  </div>
+
+  <!-- Gallery Container -->
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200?text=Nature+1" class="nature" onclick="openLightbox(0)">
+    <img src="https://via.placeholder.com/300x200?text=City+1" class="city" onclick="openLightbox(1)">
+    <img src="https://via.placeholder.com/300x200?text=Nature+2" class="nature" onclick="openLightbox(2)">
+    <img src="https://via.placeholder.com/300x200?text=City+2" class="city" onclick="openLightbox(3)">
+    <img src="https://via.placeholder.com/300x200?text=Nature+3" class="nature" onclick="openLightbox(4)">
+  </div>
+
+  <!-- Lightbox View -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
